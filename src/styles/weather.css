@@ -1,0 +1,10 @@
+.weather {
+  margin: 1em;
+  padding: 1em;
+  font-size: 1.2em;
+  width: 10em;
+  height: 6em;
+  color: white;
+  border-radius: 0.1em;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px -20px #545454; }
