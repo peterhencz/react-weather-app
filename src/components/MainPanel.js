@@ -3,11 +3,11 @@ import '../styles/mainpanel.scss';
 import Titles from './titles';
 import Form from './form';
 
-const MainPanel = ({getWeather, error}) => (
+const MainPanel = ({handleFormSubmit, error}) => (
   <div className="main-panel">
     <Titles />
     <Form 
-      getWeather={getWeather}
+      getWeather={handleFormSubmit}
     />
     { error && <p>{ error }</p> }
   </div>

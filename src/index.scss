@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:100');
 @import url('https://fonts.googleapis.com/css?family=Nunito:200');
 
 * {
   margin: 0px;
   padding: 0px;
+  font-weight: 100;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,34 +11,44 @@
 }
 
 body {
-  margin: 4em;
-  color: white;
+  opacity: 0.9;
+  font-size: 1em;
+  color: black;
   font-family: 'Nunito', sans-serif;
   font-weight: 100;
-  background: -webkit-linear-gradient(13deg, rgb(19, 91, 156), rgb(152, 165, 178));
-  background: linear-gradient(13deg, rgb(19, 91, 156), rgb(152, 165, 178));
+
+  background: -webkit-linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));
+  background: linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));
+  
   width: 100%;
   height: 100%;
+  // animation: GradientMove 30s ease-in infinite;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 200% 200%;
   background-position: center;
   background-attachment: fixed;
 }
 
 #root {
-  width: 80%;
+  width: 100%;
   height: 30em;
-  padding: 1.2em;
+  padding-right: 1em;
   opacity: 1;
 }
 
-p {
-  font-size: 0.8em;
+h1 {
+  font-size: 2em;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2em;
-  color: white;
-  opacity: 0.4;
+h2 {
+  font-size: 1.4em;
 }
+
+h3 {
+  font-size: 1em;
+}
+
+// @keyframes GradientMove { 
+//   0%{background-position:10% 70%}
+//   100%{background-position: 0% 100%}
+// }
