@@ -5,6 +5,7 @@ import getWeather from './services/api';
 import './index.scss';
 import './App.scss';
 
+
 class App extends React.Component {
 
   state = {
@@ -26,7 +27,7 @@ class App extends React.Component {
     if (city === '' || country === '') { 
       this.setState({
         hasError: true,
-        error: 'please choose a city'
+        error: 'Please choose a city/country'
       })
       return
     }

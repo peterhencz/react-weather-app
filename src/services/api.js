@@ -1,10 +1,24 @@
 const API_KEY = "7257dfb135c8fcd4ac3b2fbf49fadc31";
 
 const getWeather = async (city, country) => {
-  const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
-  const data = await api_call.json();
-  console.log(data);
-  return data;
+  return fetch(
+    `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`,
+  )
+  .then(response => {
+    if (response.ok) {
+      return Promise.resolve(response);
+    } else {
+      return Promise.reject(new Error('Failed to load'));
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    return data;
+  })
+  .catch(error => {
+    console.log(`Error: ${error.message}`);
+    throw error;
+  });
 }
 
 export default getWeather;

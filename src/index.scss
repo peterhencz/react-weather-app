@@ -16,13 +16,10 @@ body {
   color: black;
   font-family: 'Nunito', sans-serif;
   font-weight: 100;
-
   background: -webkit-linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));
-  background: linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));
-  
+  background: linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));  
   width: 100%;
   height: 100%;
-  // animation: GradientMove 30s ease-in infinite;
   background-repeat: no-repeat;
   background-size: 200% 200%;
   background-position: center;
@@ -47,8 +44,3 @@ h2 {
 h3 {
   font-size: 1em;
 }
-
-// @keyframes GradientMove { 
-//   0%{background-position:10% 70%}
-//   100%{background-position: 0% 100%}
-// }
