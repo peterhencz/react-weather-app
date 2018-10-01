@@ -1,6 +1,6 @@
 import React from 'react';
-import MainPanel from './components/MainPanel';
-import Weather from './components/weather';
+import MainPanel from './components/mainpanel/MainPanel';
+import Weather from './components//weather/weather';
 import getWeather from './services/api';
 import './index.scss';
 import './App.scss';

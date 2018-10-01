@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/mainpanel.scss';
-import Titles from './titles';
-import Form from './form';
+import './mainpanel.scss';
+import Titles from '../titles/titles';
+import Form from '../form/form';
 
 const MainPanel = ({handleFormSubmit, error}) => (
   <div className="main-panel">

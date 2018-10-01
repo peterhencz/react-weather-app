@@ -11,4 +11,4 @@
   border-radius: 2.4px;
   box-shadow: 0 5px 60px -20px #545454;
   overflow: hidden;
-}
+  transition-duration: .4s; }

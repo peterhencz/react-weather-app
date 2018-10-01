@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/weather.scss';
-import icons from '../services/icons';
+import './weather.scss';
+import icons from '../../services/icons';
 
 console.log(icons);
 
