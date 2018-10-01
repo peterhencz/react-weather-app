@@ -5,15 +5,13 @@
   font-weight: 100;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: visible; }
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   opacity: 0.9;
   font-size: 1em;
   color: black;
   font-family: 'Nunito', sans-serif;
-  font-weight: 100;
   background: -webkit-linear-gradient(19deg, #6ea3d3, #ebbbbb);
   background: linear-gradient(19deg, #6ea3d3, #ebbbbb);
   width: 100%;
@@ -25,9 +23,7 @@ body {
 
 #root {
   width: 100%;
-  height: 30em;
-  padding-right: 1em;
-  opacity: 1; }
+  height: 30em; }
 
 h1 {
   font-size: 2em; }

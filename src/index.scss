@@ -7,7 +7,6 @@
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: visible;
 }
 
 body {
@@ -15,7 +14,6 @@ body {
   font-size: 1em;
   color: black;
   font-family: 'Nunito', sans-serif;
-  font-weight: 100;
   background: -webkit-linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));
   background: linear-gradient(19deg, rgb(110, 163, 211), rgb(235, 187, 187));  
   width: 100%;
@@ -29,8 +27,7 @@ body {
 #root {
   width: 100%;
   height: 30em;
-  padding-right: 1em;
-  opacity: 1;
+  // padding-right: 1em;
 }
 
 h1 {
