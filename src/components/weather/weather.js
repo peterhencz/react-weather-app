@@ -2,7 +2,9 @@ import React from 'react';
 import './weather.scss';
 import icons from '../../services/icons';
 
-console.log(icons);
+
+// The Weathercomponent shows the city tile with the weather informations and sets the icon
+// 
 
 const Weather = ({city, country, temperature, description, icon }) => {
   return (

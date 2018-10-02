@@ -8,6 +8,9 @@ import './App.scss';
 
 class App extends React.Component {
 
+
+  // State contains weather informations about the selected city, null by default
+
   state = {
     temperature: null,
     city: null,
@@ -18,11 +21,16 @@ class App extends React.Component {
     hasError: true
   }
 
+
+  // the handleFormSubmit calls the api and sets the state from the getWeather function
+
   handleFormSubmit = async (e) => {
     e.preventDefault();
 
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
+
+    // if the city and country input forms are empty, the method sends an error message
 
     if (city === '' || country === '') { 
       this.setState({
@@ -51,7 +59,7 @@ class App extends React.Component {
         country: undefined,
         icon: undefined,
         description: undefined,
-        error: data.message
+        error: data.message 
       });
     }
   }
@@ -63,6 +71,8 @@ class App extends React.Component {
           handleFormSubmit={this.handleFormSubmit} 
           error={this.state.error} />
         {
+          // First we check the error code and if it is 200, this part renders the weather component whit the weather informations
+
           this.state.hasError
             ? null 
             :
