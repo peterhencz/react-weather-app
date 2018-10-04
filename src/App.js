@@ -1,5 +1,5 @@
 import React from 'react';
-import MainPanel from './components/mainpanel/MainPanel';
+import MainPanel from './components/MainPanel/MainPanel';
 import Weather from './components/Weather/Weather';
 import getWeather from './services/weatherapi';
 import './index.scss';

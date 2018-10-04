@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
-import Input from "../input/input";
+import Input from "../Input/Input";
 import "./form.scss";
 
 const Form = ({getWeather}) => (
