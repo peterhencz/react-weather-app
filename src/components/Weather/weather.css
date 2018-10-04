@@ -1,0 +1,53 @@
+.weather {
+  position: relative;
+  margin: 1em;
+  opacity: 0.6;
+  width: 20em;
+  height: 6em;
+  padding: 1.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 2.4px;
+  box-shadow: 0 5px 60px -20px #545454;
+  transition-duration: .4s; }
+
+.weather::after {
+  content: '';
+  background: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .4s;
+  transform: scale(1.14); }
+
+.weather:active::after {
+  transform: scale(1);
+  padding: 0.6em;
+  margin: 0;
+  opacity: 0.3;
+  transition: 0s; }
+
+.temp {
+  display: flex;
+  flex-direction: column; }
+
+.weather:hover {
+  transform: scale(1.024) perspective(2000px) translate3d(0px, 2px, -2px) rotatex(-2deg);
+  opacity: 0.8;
+  box-shadow: 5px 10px 60px -16px #545454; }
+
+.weather:active {
+  opacity: 1;
+  transform: perspective(2000px) translate3d(0px, -1px, 0px) rotateY(2deg) rotatex(2deg);
+  box-shadow: 5px 20px 60px -10px #545454; }
+
+img {
+  opacity: 0.8;
+  width: 3em; }

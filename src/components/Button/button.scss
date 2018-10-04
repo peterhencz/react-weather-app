@@ -1,0 +1,26 @@
+button {
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 1.2em;
+  width: 6em;
+  margin: 1em;
+  padding: 0.4em;
+  border: none; 
+  outline: none;
+  transform: perspective(3000px);
+  transition: 0.12s ease-in-out;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: white;
+  opacity: 0.7;
+  box-shadow: 0 10px 20px -15px #545454;  
+}
+
+button:active {
+  background:white;
+  background-size: 100%;
+  opacity: 0.9;
+  transform: scale(0.98);
+  box-shadow: 0 5px 30px -20px #545454;
+}
