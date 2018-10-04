@@ -1,7 +1,7 @@
 import React from 'react';
 import './mainpanel.scss';
-import Titles from '../titles/titles';
-import Form from '../form/form';
+import Titles from '../Titles/Titles';
+import Form from '../Form/Form';
 
 // The MainPanel contains the title, the input forms and the submit button
 

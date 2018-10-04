@@ -40,7 +40,7 @@
 
 .weather:hover {
   transform: scale(1.024) perspective(2000px) translate3d(0px, 2px, -2px) rotatex(-2deg);
-  opacity: 0.7;
+  opacity: 0.8;
   box-shadow: 5px 10px 60px -16px #545454; }
 
 .weather:active {
