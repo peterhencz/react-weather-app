@@ -8,21 +8,15 @@ import './App.scss';
 
 class App extends React.Component {
 
-
-  // State contains weather informations about the selected city, null by default
-
   state = {
-    temperature: null,
-    city: null,
-    country: null,
+    temperature: [],
+    city: [],
+    country: [],
     icon: null,
     description: null,
     error: null,
     hasError: true
   }
-
-
-  // the handleFormSubmit calls the api and sets the state from the getWeather function
 
   handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -30,9 +24,7 @@ class App extends React.Component {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
 
-    // if the city and country input forms are empty, the method sends an error message
-
-    if (city === '' || country === '') { 
+    if (city === '' || country === '') {
       this.setState({
         hasError: true,
         error: 'Please choose a city/country'
@@ -43,23 +35,23 @@ class App extends React.Component {
     const data = await getWeather(city, country);
 
     if (data.cod === 200) {
-      this.setState({
-        temperature: Math.floor(data.main.temp - 273),
-        city: data.name,
-        country: data.sys.country,
+      this.setState(prevState => ({
+        temperature: [...prevState.temperature, Math.floor(data.main.temp - 273)],
+        city: [...prevState.city, data.name],
+        country: [...prevState.country, data.sys.country],
         description: data.weather[0].description,
         icon: data.weather[0].icon,
         error: "",
         hasError: false
-      });      
+      }));
     } else {
       this.setState({
         temperature: undefined,
-        city: undefined,
+        city: this.state.city,
         country: undefined,
         icon: undefined,
         description: undefined,
-        error: data.message 
+        error: data.message
       });
     }
   }
@@ -67,23 +59,26 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <MainPanel 
-          handleFormSubmit={this.handleFormSubmit} 
+        <MainPanel
+          handleFormSubmit={this.handleFormSubmit}
           error={this.state.error} />
-        {
-          // First we check the error code and if it is 200, this part renders the weather component whit the weather informations
-
-          this.state.hasError
-            ? null 
-            :
-            <Weather 
-              temperature={this.state.temperature}
-              city={this.state.city}
-              country={this.state.country}
-              description={this.state.description}
-              icon={this.state.icon}
-            />
-        }
+          <div className="weatherPanel">
+            {
+              this.state.hasError
+              ? null
+              : this.state.city.map( (city, i) => {
+                return(
+                <Weather
+                  key={city}
+                  temperature={this.state.temperature[i]}
+                  city={city}
+                  country={this.state.country[i]}
+                  description={this.state.description}
+                  icon={this.state.icon}
+                />)
+              })
+            }
+        </div>
       </div>
     );
   }
