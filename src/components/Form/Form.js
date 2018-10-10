@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 import { connect } from 'react-redux';
 import { addWeather } from '../../actions/actions';
-import "./form.scss";
+import "./Form.scss";
 
 const Form = ({addWeather}) => (
   <form onSubmit={(e) => {
