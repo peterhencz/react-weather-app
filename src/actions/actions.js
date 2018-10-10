@@ -1,7 +1,6 @@
-export const getWeather = () => dispatch => {
+export const addWeather = () => dispatch => {
   dispatch({
-    type: 'GET_WEATHER',
+    type: 'ADD_WEATHER',
     payload: 'cica'
   })
 }
-  

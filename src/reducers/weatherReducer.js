@@ -1,6 +1,8 @@
-export default (state = {}, action) => {
+export default (state = {
+  defaultCity: 'Budapest',
+}, action) => {
   switch (action.type) {
-    case 'GET_WEATHER':
+    case 'ADD_WEATHER':
     return {
       result: action.payload
     }
