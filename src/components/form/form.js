@@ -5,11 +5,16 @@ import { connect } from 'react-redux';
 import { addWeather } from '../../actions/actions';
 import "./form.scss";
 
-const Form = ({getWeather, defaultCity}) => (
-  <form onSubmit={getWeather}>
-    <Input name="city" placeholder="City..." value={defaultCity}/>
+const Form = ({addWeather}) => (
+  <form onSubmit={(e) => {
+    e.preventDefault();
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
+    addWeather(city, country);
+  }}>
+    <Input name="city" placeholder="City..." />
     <Input name="country" placeholder="Country..." />
-    <Button title="🌤"/>
+    <Button title="🌤" />
   </form>
 );
 
@@ -17,8 +22,6 @@ const mapStateToProps = store => ({
   defaultCity: store.weatherReducer.defaultCity
  })
 
-const mapDispatchToProps = dispatch => ({
-  addWeather: () => dispatch(addWeather())
-})
+const mapDispatchToProps = { addWeather }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

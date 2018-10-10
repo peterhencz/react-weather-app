@@ -1,6 +1,7 @@
-export const addWeather = () => dispatch => {
-  dispatch({
-    type: 'ADD_WEATHER',
-    payload: 'cica'
-  })
-}
+export const addWeather = (city, country) => ({
+  type: 'ADD_WEATHER_REQUESTED',
+  payload: {
+    city, 
+    country,
+  }
+})
