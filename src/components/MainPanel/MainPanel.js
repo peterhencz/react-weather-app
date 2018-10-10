@@ -1,5 +1,5 @@
 import React from 'react';
-import './mainpanel.scss';
+import './MainPanel.scss';
 import Titles from '../Titles/Titles';
 import Form from '../Form/Form';
 
