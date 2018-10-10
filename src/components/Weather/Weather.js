@@ -1,5 +1,5 @@
 import React from 'react';
-import './weather.scss';
+import './Weather.scss';
 import icons from '../../services/icons';
 
 // The Weathercomponent shows the city tile with the weather informations and sets the icon
